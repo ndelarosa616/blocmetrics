@@ -1,2 +1,24 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<br>
+<div class="jumbotron">
+  <h1>Blocmetrics</h1>
+  <p>Blocmetrics is an analytics service and reporting tool that you can use with web apps to track user activity and report results.</p>
+  <p>
+    <%= link_to "Sign in", new_user_session_path, class: 'btn btn-primary' %> or
+    <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary' %> today!
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Reporting Features</h2>
+    <p>Become more aware of which parts or your application users are utilizing the most!
+  </div>
+  <div class="col-md-4">
+    <h2>API</h2>
+    <p>Easy to use API to allow you to format your data the way you'd like! You can integrate the analytics into your existing application and workflow!</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Tracking</h2>
+    <p>Provides an easy and efficient way for you to track user activity.</p>
+  </div>
+</div>
