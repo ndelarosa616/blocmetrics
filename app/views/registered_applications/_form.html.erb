@@ -1,0 +1,27 @@
+<% if current_user %>
+  <div class="col-md-8">
+    <%= form_for registered_application do |f| %>
+      <% if registered_application.errors.any? %>
+      <div class="alert alert-danger">
+        <h4>There are <%= pluralize(registered_application.errors.count, "error") %>.</h4>
+        <ul>
+          <% registered_application.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control', placeholder: "Enter application name" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :url %>
+        <%= f.url_field :url, class: 'form-control', placeholder: "Enter the applications url" %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Register Application", class: 'btn btn-success' %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
