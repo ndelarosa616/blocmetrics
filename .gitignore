@@ -18,3 +18,7 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore Stupid DS_Store
+.DS_Store
+app/.DS_Store
