@@ -6,3 +6,22 @@
   <div class="col-md-4">
     <%= link_to "Unregister Application", @registered_application, method: :delete, data: { confirm: "Are you sure you want to unregister this application? This process is unreversible!" }, class: 'btn btn-danger' %>
 </div>
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <th>Event Name</th>
+    <th>Event Count</th>
+  </thead>
+  <tbody>
+    <% @events.each do |name, event| %>
+    <tr>
+      <td><%= name %></td>
+      <td><%= event.count %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+

@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'figaro', '1.0'
 # adding devise for user authentication
 gem 'devise'
+# added faker to seed data
+gem 'faker'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
