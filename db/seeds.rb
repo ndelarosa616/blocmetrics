@@ -45,7 +45,7 @@ application_event = Event.create!(
   )
 application_event.save!
 
-20.times do
+50.times do
   event = Event.create!(
     registered_application: registered_applications.sample,
     name: Faker::Hacker.verb
