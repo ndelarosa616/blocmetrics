@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'figaro', '1.0'
 # adding devise for user authentication
 gem 'devise'
+# added faker to seed data
+gem 'faker'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -44,5 +46,9 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Add Binding_of_Caller for better debugging
+  gem 'binding_of_caller'
+  # Add better errors to debug better
+  gem 'better_errors'
 end
 
