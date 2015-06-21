@@ -6,12 +6,18 @@
         <tr>
           <th>Application Name</th>
           <th>Application URL</th>
+          <th>Actions</th>
         </tr>
       </thead>
     <% @registered_applications.each do |application| %>
       <tr>
         <td><strong><%= link_to application.name, application %></strong></td>
         <td><%= link_to application.url, application.url, target: "_blank" %></td>
+        <td>
+          <%= link_to 'Show', registered_application_path(application), class: 'btn btn-success' %>
+          <%= link_to 'Edit', edit_registered_application_path(application), class: 'btn btn-success' %>
+          <%= link_to 'Delete', registered_application_path(application), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this application?' } %>
+        </td>
       </tr>
     <% end %>
     </table>

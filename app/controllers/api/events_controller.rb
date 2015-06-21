@@ -1,12 +1,6 @@
 class API::EventsController < ApplicationController
 
   before_filter :set_access_control_headers
-
-  def set_access_control_headers
-    headers['Access-Control-Allow-Origin'] = '*'
-    headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
-    headers['Access-Control-Allow-Headers'] = 'Content-Type'
-  end
   skip_before_action :verify_authenticity_token
 
   def create
@@ -27,6 +21,13 @@ class API::EventsController < ApplicationController
   private
 
   def event_params
+    Rails.logger.info "\n\nparams: #{params}\n\n"
     params.require(:event).permit(:name)
+  end
+
+  def set_access_control_headers
+    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
+    headers['Access-Control-Allow-Headers'] = 'Access-Control-Allow-Origin, Content-Type'
   end
 end
