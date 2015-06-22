@@ -32,6 +32,10 @@ gem 'figaro', '1.0'
 gem 'devise'
 # added faker to seed data
 gem 'faker'
+# added chartkick for graphs
+gem 'chartkick'
+# added groupdate for line graphs
+gem 'groupdate'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

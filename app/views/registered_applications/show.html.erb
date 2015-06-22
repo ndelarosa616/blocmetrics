@@ -1,3 +1,7 @@
+<%= javascript_include_tag "//www.google.com/jsapi" %>
+<%= javascript_include_tag "application", "chartkick" %>
+<%= yield :charts_js %>
+
 <div class="row">
   <div class="col-md-8">
     <h1><%= @registered_application.name %></h1>
@@ -21,6 +25,9 @@
     <% end %>
   </tbody>
 </table>
+
+<%= pie_chart @registered_application.events.group(:name).count %>
+
 
 
 
